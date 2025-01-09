@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepositorioEstudiante {
+  List<Estudiante> studentsList = new ArrayList<Estudiante>();
 
-  public static void main(String[] args) {
+  public String toString() {
+    return this.studentsList.toString();
+  }
 
-    List<Estudiante> studentsList = new ArrayList<Estudiante>();
-
+  public RepositorioEstudiante() {
     Estudiante estudiante_1 = new Estudiante(
         "Harry Potter", "+0000000012",
         "ds@hogwarts.edu", "Privet Dr 4th", "Scottish Highlands", " MM", "12345", "Great Britain",
@@ -50,20 +52,17 @@ public class RepositorioEstudiante {
         "rr@hogwarts.edu", "Pinespray", "Scottish Highlands", " MM", "12345", "Great Britain",
         "019", 3.99, new String[] { "Conjuros", "Criaturas magicas" }, new String[] { "Sem Astrologia" });
 
-    studentsList.add(estudiante_1);
-    studentsList.add(estudiante_2);
-    studentsList.add(estudiante_3);
-    studentsList.add(estudiante_4);
-    studentsList.add(estudiante_5);
-    studentsList.add(estudiante_6);
-    studentsList.add(estudiante_7);
-    studentsList.add(estudiante_8);
-    studentsList.add(estudiante_9);
-    studentsList.add(estudiante_10);
+    this.studentsList.add(estudiante_1);
+    this.studentsList.add(estudiante_2);
+    this.studentsList.add(estudiante_3);
+    this.studentsList.add(estudiante_4);
+    this.studentsList.add(estudiante_5);
+    this.studentsList.add(estudiante_6);
+    this.studentsList.add(estudiante_7);
+    this.studentsList.add(estudiante_8);
+    this.studentsList.add(estudiante_9);
+    this.studentsList.add(estudiante_10);
 
-    // String[] strArray = new String[studentsList.size()];
-    // strArray = studentsList.toArray(strArray);
-    System.out.println(studentsList);
   }
 
 }
