@@ -17,11 +17,13 @@ public class Estudiante extends Persona {
 
   public Estudiante(String nombre, String numeroCelular, String correoElectronico,
       String direccion, String ciudad, String estado, String codigoPostal, String pais,
-      String codigo, double gpa) {
+      String codigo, double gpa, String[] asignaturas, String[] seminarios) {
     super(nombre, numeroCelular, correoElectronico,
         direccion, ciudad, estado, codigoPostal, pais);
     this.numeroEstudiante = codigo;
     this.promedioNotas = gpa;
+    this.listadoAsignaturas = asignaturas;
+    this.seminariosTomados = seminarios;
   }
 
   public String toString() {
