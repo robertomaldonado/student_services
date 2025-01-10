@@ -6,34 +6,40 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ServiceEstudiante {
-  static RepositorioEstudiante studentRepo = new RepositorioEstudiante();
-  static List<Estudiante> filteredList = new ArrayList<>();
 
-  public static List<Estudiante> listAllStudents() {
-    return studentRepo.studentsList;
+  RepositorioEstudiante studentRepo;
+  List<Estudiante> filteredList;
+
+  public ServiceEstudiante() {
+    studentRepo = new RepositorioEstudiante();
+    filteredList = new ArrayList<>();
   }
 
-  public static List<Estudiante> filterStudentsByName(String seekName) {
-    filteredList.clear();
-    for (Estudiante stud : studentRepo.studentsList) {
-      if (stud.getNombre() == seekName) {
-        filteredList.add(stud);
+  public List<Estudiante> listAllStudents() {
+    return this.studentRepo.studentsList;
+  }
+
+  public List<Estudiante> filterStudentsByName(String seekName) {
+    this.filteredList.clear();
+    for (Estudiante stud : this.studentRepo.studentsList) {
+      if (stud.getNombre().equals(seekName)) {
+        this.filteredList.add(stud);
       }
     }
-    return filteredList;
+    return this.filteredList;
   }
 
-  public static List<Estudiante> filterStudentsByPhoneNumber(String seekPhone) {
-    filteredList.clear();
+  public List<Estudiante> filterStudentsByPhoneNumber(String seekPhone) {
+    this.filteredList.clear();
     for (Estudiante stud : studentRepo.studentsList) {
-      if (stud.getNumeroCelular() == seekPhone) {
-        filteredList.add(stud);
+      if (stud.getNumeroCelular().equals(seekPhone)) {
+        this.filteredList.add(stud);
       }
     }
-    return filteredList;
+    return this.filteredList;
   }
 
-  public static List<Estudiante> orderByGPA() {
+  public List<Estudiante> orderByGPA() {
     List<Estudiante> sortedList = studentRepo.studentsList.stream()
         .sorted(Comparator.comparing(Estudiante::getPromedioNotas).reversed())
         .collect(Collectors.toList());
