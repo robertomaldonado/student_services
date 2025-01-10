@@ -40,24 +40,4 @@ public class ServiceEstudiante {
     return sortedList;
   }
 
-  public static void main(String[] args) {
-    List<Estudiante> all = listAllStudents();
-    System.out.println(all);
-    System.out.println("\n\n");
-
-    List<Estudiante> nameFiltered = filterStudentsByName("Harry Potter");
-    System.out.println(nameFiltered);
-    System.out.println("\n\n");
-
-    List<Estudiante> phoneFiltered = filterStudentsByPhoneNumber("+0000000012");
-    System.out.println(phoneFiltered);
-    System.out.println("\n\n");
-
-    List<Estudiante> sortedList = orderByGPA();
-    System.out.println(sortedList);
-    System.out.println("\n\n");
-
-    // System.out.println(filteredList);
-  }
-
 }

@@ -24,7 +24,7 @@ public class Direccion {
   }
 
   public String toString() {
-    return "DIR: " + direccion + ", " + ciudad + ", " + estado + ", " + codigoPostal + ". " + pais;
+    return "Direccion: " + direccion + ", " + ciudad + ", " + estado + ", " + codigoPostal + ". " + pais;
   }
 
   public String getCiudad() {

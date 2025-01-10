@@ -27,12 +27,12 @@ public class Estudiante extends Persona {
   }
 
   public String toString() {
-    String student_data = "| STUD: " + numeroEstudiante + ", GPA: " + promedioNotas + " "
-        + "Listado asignaturas: " + String.join(",", listadoAsignaturas)
-        + " Seminarios tomados: " + String.join(",", seminariosTomados)
-        + "\n" + this.getNombre() + " "
-        + this.getNumeroCelular() + " "
-        + this.getCorreoElectronico() + "\n" + this.getDireccion() + "|\n";
+    String student_data = "|| - STUDENT: " + this.getNombre() + " Codigo: " + numeroEstudiante + ", GPA: "
+        + promedioNotas
+        +
+        " Celular: " + this.getNumeroCelular() + " " + this.getCorreoElectronico() + "\n" + this.getDireccion() + "\n" +
+        " Listado asignaturas: " + String.join(", ", listadoAsignaturas) +
+        " Seminarios tomados: " + String.join(", ", seminariosTomados) + "\n";
     return student_data;
   }
 
