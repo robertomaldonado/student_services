@@ -1,5 +1,8 @@
 package com.example.studentservice.entities;
 
+import lombok.Data;
+
+@Data
 public class Persona {
   private String nombre;
   private String numeroCelular;
@@ -24,22 +27,6 @@ public class Persona {
   public String toString() {
     String persona_data = "PERSONA: " + nombre + " " + numeroCelular + " " + correoElectronico + "\n" + direccion;
     return persona_data;
-  }
-
-  public String getCorreoElectronico() {
-    return correoElectronico;
-  }
-
-  public String getNombre() {
-    return nombre;
-  }
-
-  public String getNumeroCelular() {
-    return numeroCelular;
-  }
-
-  public Direccion getDireccion() {
-    return direccion;
   }
 
   public void comprarPaseEstacionamiento() {
