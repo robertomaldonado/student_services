@@ -1,5 +1,8 @@
-package com.example.studentservice.repository;
+package com.example.studentservice.entities;
 
+import lombok.Data;
+
+@Data
 public class Direccion {
   private String direccion;
   private String ciudad;
@@ -27,23 +30,4 @@ public class Direccion {
     return "Direccion: " + direccion + ", " + ciudad + ", " + estado + ", " + codigoPostal + ". " + pais;
   }
 
-  public String getCiudad() {
-    return ciudad;
-  }
-
-  public String getCodigoPostal() {
-    return codigoPostal;
-  }
-
-  public String getDireccion() {
-    return direccion;
-  }
-
-  public String getEstado() {
-    return estado;
-  }
-
-  public String getPais() {
-    return pais;
-  }
 }
