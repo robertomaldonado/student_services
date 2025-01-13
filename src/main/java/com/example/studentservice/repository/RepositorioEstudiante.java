@@ -3,6 +3,8 @@ package com.example.studentservice.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.studentservice.entities.Estudiante;
+
 public class RepositorioEstudiante {
     public List<Estudiante> studentsList = new ArrayList<Estudiante>();
 

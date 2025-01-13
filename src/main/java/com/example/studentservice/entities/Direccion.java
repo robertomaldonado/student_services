@@ -1,4 +1,4 @@
-package com.example.studentservice.repository;
+package com.example.studentservice.entities;
 
 public class Direccion {
   private String direccion;
