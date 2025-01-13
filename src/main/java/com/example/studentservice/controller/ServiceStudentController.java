@@ -1,8 +1,10 @@
-package com.example.studentservice;
+package com.example.studentservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.studentservice.services.ServiceEstudiante;
 
 @RestController
 public class ServiceStudentController {

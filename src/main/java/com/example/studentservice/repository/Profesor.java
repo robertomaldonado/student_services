@@ -1,4 +1,4 @@
-package com.example.studentservice;
+package com.example.studentservice.repository;
 
 public class Profesor extends Persona {
   private double salario;
