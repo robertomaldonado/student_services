@@ -11,7 +11,6 @@ import com.example.studentservice.services.ServiceEstudiante;
 
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 public class ServiceEstudianteTest {
@@ -24,14 +23,14 @@ public class ServiceEstudianteTest {
 
   @Test
   void listAllStudents() {
-    // Estudiante estudiante_1 = new Estudiante("Harry", "+0000000012",
-    // "ds@hogwarts.edu", "Privet Dr", "Scotland", " X", "HG01", "Britain",
-    // "010", 2.9, new String[] { "Historia de la magia", "Alquimia" }, new String[]
-    // { "Sem Capa Invisible" });
+    Estudiante estudiante_1 = new Estudiante("Harry", "+0000000012",
+        "ds@hogwarts.edu", "Privet Dr", "Scotland", " X", "HG01", "Britain",
+        "010", 2.9, new String[] { "Historia de la magia", "Alquimia" }, new String[] { "Sem Capa Invisible" });
+    assertThat(serviceEstudiante.listAllStudents().getFirst()).isEqualTo(estudiante_1);
+
     var studentList = serviceEstudiante.listAllStudents();
     assertThat(studentList).isNotNull();
     assertThat(studentList.size()).isEqualTo(10);
-
   }
 
 }
