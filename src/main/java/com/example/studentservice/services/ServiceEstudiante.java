@@ -5,12 +5,15 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Service;
+
 import com.example.studentservice.entities.Estudiante;
 import com.example.studentservice.repository.RepositorioEstudiante;
 
+@Service
 public class ServiceEstudiante {
 
-  RepositorioEstudiante studentRepo;
+  final RepositorioEstudiante studentRepo;
   List<Estudiante> filteredList;
 
   public ServiceEstudiante() {
